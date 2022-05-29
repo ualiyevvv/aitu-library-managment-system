@@ -62,9 +62,9 @@ class BookController extends Controller
         {
             $folder = date('Y-m-d');
             $path = $request->file('image')->store("uploads/{$folder}", 'public');
-            $url = Storage::url($path);
-            $data['image'] = $url;
+            $data['image'] = "/".$path;
         }
+        dd($path);
         $data['user_id'] = Auth::user()->id;
         $book = Book::create($data);
 
