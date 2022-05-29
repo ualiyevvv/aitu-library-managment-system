@@ -1,0 +1,14 @@
+<?php $countbook = 0 ?>
+@if(count($books) > 0)
+@foreach($books as $book)
+    <? $countuser++ ?>
+    <tr>
+    <th scope="row">{{ $countbook }}</th>
+    <td>{{ $book->caption }}</td>
+    <td>{{ $book->author }}</td>
+    <td>{{ $book->date }}</td>
+    </tr>
+@endforeach
+@else
+    <p>нет истории книг</p>
+@endif
