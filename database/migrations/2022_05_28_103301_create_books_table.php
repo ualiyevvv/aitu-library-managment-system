@@ -19,7 +19,7 @@ class CreateBooksTable extends Migration
             $table->string('author',255);
             $table->string('category',255);
             $table->string('country',255);
-            $table->string('descr',255);
+            $table->text('descr',255);
             $table->text('image')->nullable();
             $table->integer('pages')->unsigned();
             $table->text('isbn');
